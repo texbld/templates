@@ -1,0 +1,21 @@
+name = "template-std"
+version = "1"
+
+update = "apk update"
+install = "apk add"
+packages = [ "texlive", "make", "texmf-dist-latexextra" ]
+
+# The three possibilities below are mutually exclusive. (REQUIRED)
+[inherit]
+docker = "alpine:latest"
+
+[project.files]
+"image/main.tex" = "main.tex"
+"image/Makefile" = "Makefile"
+"image/.gitignore" = ".gitignore"
+
+# commands for the project (invoked with `texbld run $COMMAND`)
+[project.commands]
+"compile" = "make clean all"
+"watch" = "make watch"
+"clean" = "make clean"

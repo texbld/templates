@@ -1,0 +1,17 @@
+name = "md"
+version = "1"
+
+install = "apk add"
+update = "apk update"
+
+[inherit]
+docker = "pandoc/latex:latest"
+
+[project.files]
+"md/.gitignore" = ".gitignore"
+"md/main.md" = "main.md"
+"md/Makefile" = "Makefile"
+
+
+[project.commands]
+compile = "pandoc -o main.pdf main.md"
