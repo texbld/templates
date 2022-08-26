@@ -1,0 +1,20 @@
+name = "texbld-physics"
+version = "1"
+
+[inherit.github]
+owner = "junikimm717"
+repository="texbld-templates"
+revision = "e3101583af4615852031c542b26ffc76ce530e83"
+sha256 = "e912e9989ea068c19688d435e2fedf9a0b6b055e3f13ca6d235e4c9d9d624963"
+
+[files]
+# "source file path" = "destination path"
+
+
+# files to be copied into the source project
+[project.files]
+"physics/physics.sty" = "physics.sty"
+"physics/signature.png" = "signature.png"
+"physics/main.tex" = "main.tex"
+
+[project.commands]
